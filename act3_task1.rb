@@ -4,7 +4,7 @@
 
 
 def extract_urls(text)
-    pattern = /((http|https|ftp):\/\/(www)?.+)/
+    pattern = /((http|https|ftp):\/\/(www\.)?[A-Za-z0-9]+\.(org|com)?(\/[A-Za-z\?\+\=]+)?)/
     url_list = text.scan(pattern)
     puts url_list
 end
