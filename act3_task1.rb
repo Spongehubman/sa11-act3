@@ -6,7 +6,9 @@
 def extract_urls(text)
     pattern = /((http|https|ftp):\/\/(www\.)?[A-Za-z0-9]+\.(org|com)?(\/[A-Za-z\?\+\=]+)?)/
     url_list = text.scan(pattern)
-    puts url_list
+    url_list.each do |x|
+        puts x[0]
+    end
 end
 
 sample_text = "Visit our site at http://www.example.org for more information.
